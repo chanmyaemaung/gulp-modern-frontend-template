@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+$primary-bg-color: blue;
+$light-bg-color: #fbf9f6;
+$straight-line-color: #e0e0e0;
+$cyan-color: #3498db;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $light-bg-color;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 350px;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: $straight-line-color;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        transform: translateY(-25%);
+        height: 4px;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .progress {
+        background-color: $cyan-color;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        transform: translateY(-25%);
+        z-index: -1;
+        height: 4px;
+        width: 0%;
+        transition: 0.4s ease;
+    }
+
+    .progress__step {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid $straight-line-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        background-color: white;
+        transition: 0.4s ease 0.2s;
+
+        &--active {
+            background-color: $cyan-color;
+            color: white;
+        }
+    }
+}
+
+.button__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #prev {
+        cursor: not-allowed;
+    }
+
+    .btn {
+        background-color: $cyan-color;
+        color: white;
+        padding: 5px 25px;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+
+        &[disabled] {
+            background-color: $straight-line-color;
+        }
+
+        &:active {
+            scale: 0.95;
+        }
+    }
+}
