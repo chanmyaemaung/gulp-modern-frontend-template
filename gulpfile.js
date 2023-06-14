@@ -26,22 +26,6 @@ function createWatchTask(filePath, task, reloadTask) {
 }
 
 /**
- * Notifier Defaults Configuration | Optional
- */
-/* notifier.defaults({
-  messages: {
-    sass: "Sass compiled successfully",
-    less: "Less compiled successfully",
-    js: "JavaScript compiled successfully",
-    img: "Images optimized successfully",
-    html: "HTML minified successfully",
-  },
-  prefix: "===>",
-  suffix: "<===",
-  exclusions: ".map",
-}); */
-
-/**
  * Files Path
  * @description Paths to files
  */
