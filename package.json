@@ -28,7 +28,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-kit": "^0.3.0",
     "gulp-less": "^5.0.0",
     "gulp-notifier": "^1.0.6",
     "gulp-plumber": "^1.2.1",
