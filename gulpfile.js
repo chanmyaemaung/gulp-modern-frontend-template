@@ -60,7 +60,6 @@ function sassTask() {
     )
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest("dist/assets/css", { sourcemaps: "." }));
-  // .pipe(notifier.success("sass"));
 }
 
 /**
@@ -86,7 +85,6 @@ function lessTask() {
     )
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest("dist/assets/css", { sourcemaps: "." }));
-  // .pipe(notifier.success("less"));
 }
 
 /**
@@ -105,7 +103,6 @@ function jsTask() {
     .pipe(terser())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest("dist/assets/js", { sourcemaps: "." }));
-  // .pipe(notifier.success("js"));
 }
 
 /**
@@ -116,7 +113,6 @@ function imageTask() {
   return src(filesPath.img, { since: lastRun(imageTask) })
     .pipe(cache(imagemin()))
     .pipe(dest("dist/assets/img"));
-  // .pipe(notifier.success("img"));
 }
 
 /**
@@ -127,7 +123,6 @@ function htmlMinify() {
   return src(filesPath.html, { since: lastRun(htmlMinify) })
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest("dist"));
-  // .pipe(notifier.success("html"));
 }
 
 /**
