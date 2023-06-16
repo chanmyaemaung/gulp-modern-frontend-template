@@ -1,6 +1,6 @@
 {
   "name": "gulp-starter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GULP: The Production Ready Modern FrontEnd Template",
   "main": "gulpfile.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "keywords": [
     "gulp",
     "sass",
+    "less",
     "postcss",
     "babel",
     "browser-sync",
@@ -28,6 +29,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^5.0.0",
     "gulp-notifier": "^1.0.6",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
